@@ -15,7 +15,7 @@ class LedBlinker(object):
     __led2 = '/mobile_base/commands/led2'
 
     def __init__(self):
-        self.rate = rospy.get_param('~rate', 2) 
+        self.rate = rospy.get_param('~rate', 3)
 
         self.pub = {}
         self.pub['led1'] = rospy.Publisher(self.__led1, Led, queue_size=1)
@@ -26,6 +26,12 @@ class LedBlinker(object):
         self.thread = threading.Thread(target=self._blinker)
         self._lock = threading.Lock()
 
+    def start(self):
+        self.thread.start()
+
+    def stop(self):
+        self.thread.join()
+
     def spin(self):
         self.thread.start()
         rospy.spin()
@@ -34,7 +40,7 @@ class LedBlinker(object):
         self.pub['led2'].publish(Led.BLACK)
 
     def _blinker(self):
-        r = rospy.Rate(2)
+        r = rospy.Rate(self.rate)
         while not rospy.is_shutdown(): 
             self._last_blink_led = (self._last_blink_led % 2 ) + 1
 
@@ -52,6 +58,7 @@ class LedBlinker(object):
 
             self.pub['led1'].publish(led1)
             self.pub['led2'].publish(led2)
+            r.sleep()
 
     def set_on_error(self):
         self._lock.acquire()
