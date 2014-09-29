@@ -18,8 +18,8 @@ class LedBlinker(object):
         self.rate = rospy.get_param('~rate', 2) 
 
         self.pub = {}
-        self.pub['led1'] = rospy.Publisher(__led1, kobuki_msgs.Led, queue_size=1)
-        self.pub['led2'] = rospy.Publisher(__led2, kobuki_msgs.Led, queue_size=1)
+        self.pub['led1'] = rospy.Publisher(self.__led1, Led, queue_size=1)
+        self.pub['led2'] = rospy.Publisher(self.__led2, Led, queue_size=1)
 
         self._last_blink_led = 2
         self._state = STATE_OFF
