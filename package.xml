@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>kobuki_utils</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>Convenient modules for kobuki control</description>
 
   <maintainer email="jihoonlee.in@gmail.com">Jihoon Lee</maintainer>
