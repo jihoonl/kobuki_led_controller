@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
   <name>kobuki_utils</name>
-  <version>0.0.0</version>
-  <description>Useful scripts for kobuki control</description>
+  <version>0.0.1</version>
+  <description>Convenient modules for kobuki control</description>
 
   <maintainer email="jihoonlee.in@gmail.com">Jihoon Lee</maintainer>
   <author>Jihoon Lee</author>
