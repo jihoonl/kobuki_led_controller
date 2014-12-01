@@ -5,3 +5,8 @@ find_package(catkin REQUIRED)
 
 catkin_python_setup()
 catkin_package()
+
+install(PROGRAMS
+    scripts/chirp.bash
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
