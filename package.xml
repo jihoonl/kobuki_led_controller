@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package>
-  <name>kobuki_utils</name>
-  <version>0.0.2</version>
-  <description>Convenient modules for kobuki control</description>
+  <name>kobuki_led_controller</name>
+  <version>0.0.0</version>
+  <description>Convenient modules to control kobuki leds</description>
 
   <maintainer email="jihoonlee.in@gmail.com">Jihoon Lee</maintainer>
   <author>Jihoon Lee</author>
   <license>BSD</license>
 
-  <url type="website">http://wiki.ros.org/kobuki_utils</url>
-  <url type="repository">http://github.com/jihoonl/kobuki_utils</url>
-  <url type="bugtracker">http://github.com/jihoonl/kobuki_utils/issues</url>
+  <url type="website">http://wiki.ros.org/kobuki_led_controller</url>
+  <url type="repository">http://github.com/jihoonl/kobuki_led_controller</url>
+  <url type="bugtracker">http://github.com/jihoonl/kobuki_led_controller/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>kobuki_msgs</build_depend>
